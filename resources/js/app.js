@@ -1,14 +1,7 @@
-import { createApp } from 'vue';
-import { setDefaultHeaders, setDefaultBaseUrl } from '@/utils/fetchJson.js';
-import App from './App.vue';
+import './bootstrap';
 
-const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content') ?? '';
-console.log('CSRF Token:', csrfToken);
+import Alpine from 'alpinejs';
 
-setDefaultHeaders({'X-CSRF-TOKEN': csrfToken});
-const urlApi = document.querySelector('meta[name="api-base-url"]')?.getAttribute('content') ?? '';
-console.log('API Base URL:', urlApi);
-setDefaultBaseUrl(urlApi);
+window.Alpine = Alpine;
 
-const myApp = createApp(App);
-myApp.mount('#app');
+Alpine.start();
