@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-  return view('test');
+  return view('welcome');
 });
 
 Route::prefix('api/v1/')->group(function () {

@@ -4,7 +4,7 @@
 
 <template>
   <header>
-    <h1>Header</h1>
+    <h1>Your career</h1>
   </header>
 </template>
 

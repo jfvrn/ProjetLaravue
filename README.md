@@ -7,6 +7,15 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Escape Game
+Tu te réveilles dans un salon ancien, plongé dans la pénombre, sans aucun souvenir de la façon dont tu es arrivé là. Le bois craque sous tes pas, l'air est lourd, et tout semble figé dans le temps. Une table au centre de la pièce t'offre trois objets : une clé rouillée, une lampe torche, et un carnet dont les mots semblent plus inquiétants qu’utiles.
+
+Très vite, tu comprends que cette maison n’est pas un simple lieu abandonné. Deux portes t’attendent… et ton choix déterminera ton destin. Chaque pièce renferme des épreuves, des pièges mortels et des énigmes, où chaque erreur te rapproche d’une fin brutale.
+
+Tu devras observer, réfléchir, parfois prendre des risques… et faire confiance à ton instinct. Deux sorties sont possibles. Une visible, mais piégée. L’autre, bien cachée, réservée à ceux qui auront su explorer avec prudence et détermination.
+
+Arriveras-tu à sortir vivant de la maison aux deux clés ? Ou deviendras-tu une énigme de plus, perdue dans ses couloirs ?
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
