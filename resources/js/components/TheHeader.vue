@@ -4,7 +4,7 @@
 
 <template>
   <header>
-    <h1>Your career</h1>
+    <h1>Escape Game</h1>
   </header>
 </template>
 
