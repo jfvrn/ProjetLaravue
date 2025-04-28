@@ -17,8 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('title'); // Titre du passage
             $table->text('content'); // Contenu du passage
-            $table->unsignedBigInteger('parent_id')->nullable(); // Passage parent (relation hiérarchique)
-            $table->foreign('parent_id')->references('id')->on('passages')->onDelete('cascade'); // Clé étrangère
             $table->timestamps();
         });
     }
