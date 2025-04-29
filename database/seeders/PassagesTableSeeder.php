@@ -12,7 +12,6 @@ class PassagesTableSeeder extends Seeder
     {
         DB::table('passages')->insert([
             [
-                'id' => 1,
                 'title' => 'Armoire',
                 'content' => <<<'EOD'
 Tu ouvres l’armoire métallique. Elle grince, mais ne résiste pas.
@@ -23,7 +22,6 @@ Souhaites-tu le prendre ?
 EOD,
             ],
             [
-                'id' => 2,
                 'title' => 'Bibliothèque',
                 'content' => <<<'EOD'
 Tu examines les livres éparpillés. L’un d’eux est en meilleur état que les autres. À l’intérieur, un papier glissé :
@@ -32,7 +30,6 @@ Tu examines les livres éparpillés. L’un d’eux est en meilleur état que le
 EOD,
             ],
             [
-                'id' => 3,
                 'title' => 'BoitePiegee',
                 'content' => <<<'EOD'
 Tu t’approches de la boîte. Elle est fermée par un loquet. Tu l’ouvres lentement...
@@ -45,7 +42,6 @@ Tu t’écroules.
 EOD,
             ],
             [
-                'id' => 4,
                 'title' => 'Bureau',
                 'content' => <<<'EOD'
 Tu fouilles les tiroirs du bureau. Dans le deuxième, tu trouves un vieux papier avec l'inscription :
@@ -55,7 +51,6 @@ En dessous : ''Le manoir a été construit en 1950.''
 EOD,
             ],
             [
-                'id' => 5,
                 'title' => 'Carnet',
                 'content' => <<<'EOD'
 Le carnet est vieux et couvert de taches. À l'intérieur, des griffonnages illisibles… sauf une phrase :
@@ -66,7 +61,6 @@ Un avertissement ? Une énigme ? Ce n’est pas très clair, mais ça semble imp
 EOD,
             ],
             [
-                'id' => 6,
                 'title' => 'Clé',
                 'content' => <<<'EOD'
 Tu prends la clé rouillée. Elle semble ancienne, presque prête à se briser entre tes doigts.
@@ -79,7 +73,6 @@ La clé semble pouvoir entrer dans l'une des deux serrures… mais laquelle choi
 EOD,
             ],
             [
-                'id' => 7,
                 'title' => 'Code1873',
                 'content' => <<<'EOD'
 Tu entres 1873.  
@@ -87,7 +80,6 @@ Un bruit sourd… verrou bloqué. Ce n’est pas le bon code.
 EOD,
             ],
             [
-                'id' => 8,
                 'title' => 'Code1913',
                 'content' => <<<'EOD'
 Tu entres 1913.
@@ -100,7 +92,6 @@ Un déclic se fait entendre. Le coffre s’ouvre lentement.
 EOD,
             ],
             [
-                'id' => 9,
                 'title' => 'Code2020',
                 'content' => <<<'EOD'
 Tu tapes 2020. Rien ne se passe, à part un bip d’erreur strident.
@@ -109,7 +100,6 @@ Le mécanisme reste verrouillé.
 EOD,
             ],
             [
-                'id' => 10,
                 'title' => 'Coffre',
                 'content' => <<<'EOD'
 Tu t’approches du coffre à combinaison. Un petit clavier numérique t’invite à entrer un code à 4 chiffres.
@@ -120,7 +110,6 @@ Quels codes veux-tu essayer ?
 EOD,
             ],
             [
-                'id' => 11,
                 'title' => 'CuriositéFatale',
                 'content' => <<<'EOD'
 Tu es sorti... mais quelque chose te pousse à revenir. Peut-être as-tu laissé un indice ? Un objet important ?
@@ -135,7 +124,6 @@ Tu es à nouveau piégé.
 EOD,
             ],
             [
-                'id' => 12,
                 'title' => 'Début',
                 'content' => <<<'EOD'
 Tu ouvres lentement les yeux. La pièce est plongée dans une pénombre inquiétante. Le plafond est bas, les murs sont recouverts de boiseries sombres, et une odeur de moisissure flotte dans l'air. Tu es allongé sur un vieux canapé poussiéreux, et un mal de crâne lancinant bat à tes tempes.
@@ -151,7 +139,6 @@ Quelque chose ne tourne pas rond. Et une seule certitude te traverse : il faut s
 EOD,
             ],
             [
-                'id' => 13,
                 'title' => 'Lampe',
                 'content' => <<<'EOD'
 Tu actionnes le bouton de la lampe torche. Après un léger bourdonnement, la lampe torche s’allume. Tu balaies la pièce du faisceau de lumière et repères un chiffre inscrit à la craie sur un mur : ''37''.
@@ -160,7 +147,6 @@ Probablement un indice...
 EOD,
             ],
             [
-                'id' => 14,
                 'title' => 'Panneau',
                 'content' => <<<'EOD'
 Le panneau de contrôle est ancien, mais encore fonctionnel. Il comporte trois boutons : rouge, vert et bleu. Une note est griffonnée juste au-dessus :
@@ -169,7 +155,6 @@ Le panneau de contrôle est ancien, mais encore fonctionnel. Il comporte trois b
 EOD,
             ],
             [
-                'id' => 15,
                 'title' => 'PiegeCleDoree',
                 'content' => <<<'EOD'
 Tu choisis la clé dorée. Tu avances vers la porte au fond du couloir et l’insères dans la serrure.
@@ -181,7 +166,6 @@ Des pics surgissent du sol, trop vite. Tu n’as pas le temps de réagir.
 EOD,
             ],
             [
-                'id' => 16,
                 'title' => 'PiegeElectricite',
                 'content' => <<<'EOD'
 Tu appuies sur le bouton rouge. Le panneau grésille, puis une décharge électrique t’électrocute sur place.
@@ -192,7 +176,6 @@ Tu t’effondres.
 EOD,
             ],
             [
-                'id' => 17,
                 'title' => 'PiegeGas',
                 'content' => <<<'EOD'
 Tu descends lentement par l’échelle. L’air devient rapidement irrespirable, un gaz dense envahit l’espace.
@@ -203,7 +186,6 @@ Tu continues jusqu’au bout du tunnel... et une lumière verte s’allume au lo
 EOD,
             ],
             [
-                'id' => 18,
                 'title' => 'Porte1',
                 'content' => <<<'EOD'
 La clé tourne difficilement dans la serrure. Tu entends un déclic. La porte s’ouvre sur un couloir étroit, mal éclairé. Tu avances prudemment.
@@ -212,7 +194,6 @@ Au bout du couloir se trouve une nouvelle pièce : un bureau en désordre, une b
 EOD,
             ],
             [
-                'id' => 19,
                 'title' => 'Porte2',
                 'content' => <<<'EOD'
 Tu avances dans un autre couloir jusqu’à une porte massive, verrouillée par une serrure élégante.
@@ -229,7 +210,6 @@ Mais quelque chose te dit que ce manoir n’a pas livré tous ses secrets...
 EOD,
             ],
             [
-                'id' => 20,
                 'title' => 'PorteMetallique',
                 'content' => <<<'EOD'
 La clé rouillée entre dans la serrure métallique avec difficulté. Un grincement strident résonne lorsque tu tournes la poignée.
@@ -245,14 +225,12 @@ Tu aperçois :
 EOD,
             ],
             [
-                'id' => 21,
                 'title' => 'PrendreMasque',
                 'content' => <<<'EOD'
 Tu prends le masque à gaz et le ranges sur toi. Il pourrait t’être utile si tu dois affronter des vapeurs ou des substances toxiques.
 EOD,
             ],
             [
-                'id' => 22,
                 'title' => 'SortieAlternative',
                 'content' => <<<'EOD'
 Tu as choisi le bon bouton, ou tu es descendu préparé.
@@ -267,7 +245,6 @@ Un autre chemin… plus risqué, mais plus discret.
 EOD,
             ],
             [
-                'id' => 23,
                 'title' => 'Trappe',
                 'content' => <<<'EOD'
 Tu soulèves la trappe. Une échelle descend dans l’obscurité. Une odeur désagréable remonte du fond.

@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PassageController;
+use App\Http\Controllers\ChoixController;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 
@@ -19,20 +21,31 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-// Route::prefix('api/v1')->group(function () {
-//   Route::get('/users', function () {
-//     $user = User::all();
-//     return response()->json($user);
-//   });
-//  }); 
+// Routes pour les passages
+Route::prefix('api/v1')->group(function () {
+    Route::get('/passages', [PassageController::class, 'index'])->name('passages.index');
+    Route::get('/passages/{id}', [PassageController::class, 'show'])->name('passages.show');
+    Route::post('/', [PassageController::class, 'store'])->name('passages.store');
+    Route::put('/{id}', [PassageController::class, 'update'])->name('passages.update');
+    Route::delete('/{id}', [PassageController::class, 'destroy'])->name('passages.destroy');
+});
 
-// Route::prefix('api/v1/')->group(function () {
-//   Route::get('/test', function () {
-//     return response()->json(['message' => 'Hello, World from api!']);
-//   });
-//   Route::delete('/test', function () {
-//     return response()->json(['message' => 'Deleting']);
-//   });
-// });
+// Routes pour les choix
+Route::prefix('api/v1')->group(function () {
+    Route::get('/choix', [ChoixController::class, 'index'])->name('choix.index');
+    Route::get('/choix/{id}', [ChoixController::class, 'show'])->name('choix.show');
+    Route::post('/', [ChoixController::class, 'store'])->name('choix.store');
+    Route::put('/{id}', [ChoixController::class, 'update'])->name('choix.update');
+    Route::delete('/{id}', [ChoixController::class, 'destroy'])->name('choix.destroy');
+});
+
+// Routes pour les choix
+Route::prefix('choix')->group(function () {
+    Route::get('/', [ChoixController::class, 'index'])->name('choix.index');
+    Route::get('/{id}', [ChoixController::class, 'show'])->name('choix.show');
+    Route::post('/', [ChoixController::class, 'store'])->name('choix.store');
+    Route::put('/{id}', [ChoixController::class, 'update'])->name('choix.update');
+    Route::delete('/{id}', [ChoixController::class, 'destroy'])->name('choix.destroy');
+});
 
 require __DIR__.'/auth.php';

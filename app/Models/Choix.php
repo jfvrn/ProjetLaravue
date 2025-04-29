@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Choix extends Model
 {
+    protected $table = 'choix';
     protected $fillable = ['passage_id', 'texte', 'suivant_id'];
 
     public function passage()

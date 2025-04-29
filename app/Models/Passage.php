@@ -20,4 +20,8 @@ class Passage extends Model
     {
         return $this->belongsToMany(User::class, 'user_passage')->withPivot('is_completed')->withTimestamps();
     }
+
+    public function choix(){
+        return $this->hasMany(Choix::class);
+    }
 }
