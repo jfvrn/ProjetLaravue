@@ -1,8 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\PassageController;
-use App\Http\Controllers\ChoixController;
+use App\Http\Controllers\Api\V1\PassageController;
+use App\Http\Controllers\Api\V1\ChoixController;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 
@@ -39,13 +39,5 @@ Route::prefix('api/v1')->group(function () {
     Route::delete('/{id}', [ChoixController::class, 'destroy'])->name('choix.destroy');
 });
 
-// Routes pour les choix
-Route::prefix('choix')->group(function () {
-    Route::get('/', [ChoixController::class, 'index'])->name('choix.index');
-    Route::get('/{id}', [ChoixController::class, 'show'])->name('choix.show');
-    Route::post('/', [ChoixController::class, 'store'])->name('choix.store');
-    Route::put('/{id}', [ChoixController::class, 'update'])->name('choix.update');
-    Route::delete('/{id}', [ChoixController::class, 'destroy'])->name('choix.destroy');
-});
 
 require __DIR__.'/auth.php';

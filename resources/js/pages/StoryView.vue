@@ -3,7 +3,7 @@
 </script>
 
 <template>
- <p>je suis bien la StoryView</p>
+<p>storyview maaarge</p>
 </template>
 
 <style scoped>
