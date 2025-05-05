@@ -178,11 +178,9 @@ EOD,
             [
                 'title' => 'PiegeGas',
                 'content' => <<<'EOD'
-Tu descends lentement par l’échelle. L’air devient rapidement irrespirable, un gaz dense envahit l’espace.
+Tu n’as rien pour te protéger. En quelques secondes, tu ressens une brûlure dans tes poumons. Tu t’écroules, étouffé par le gaz.
 
-Heureusement, tu as mis le masque à gaz à temps. Tu respires difficilement, mais tu tiens bon.
-
-Tu continues jusqu’au bout du tunnel... et une lumière verte s’allume au loin.
+''Tu n’étais pas préparé à ça. Fin prématurée.''
 EOD,
             ],
             [
@@ -220,7 +218,7 @@ Une lumière rouge clignote au fond. Tu entends un bourdonnement électrique. Ce
 
 Tu aperçois :
 - un panneau de contrôle  
-- une armoire métallique  
+- un masque à gaz  
 - une trappe au sol
 EOD,
             ],
