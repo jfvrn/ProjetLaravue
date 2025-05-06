@@ -1,6 +1,6 @@
 <x-app-layout>
     <div id="app">
-        <story-view></story-view>
+        {{-- <story-view></story-view> --}}
     </div>
 </x-app-layout>
 

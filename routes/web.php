@@ -25,18 +25,18 @@ Route::middleware('auth')->group(function () {
 Route::prefix('api/v1')->group(function () {
     Route::get('/passages', [PassageController::class, 'index'])->name('passages.index');
     Route::get('/passages/{id}', [PassageController::class, 'show'])->name('passages.show');
-    Route::post('/', [PassageController::class, 'store'])->name('passages.store');
-    Route::put('/{id}', [PassageController::class, 'update'])->name('passages.update');
-    Route::delete('/{id}', [PassageController::class, 'destroy'])->name('passages.destroy');
+    Route::post('/', [PassageController::class, 'store'])->name('passages.store')->middleware('admin');
+    Route::put('/{id}', [PassageController::class, 'update'])->name('passages.update')->middleware('admin');
+    Route::delete('/{id}', [PassageController::class, 'destroy'])->name('passages.destroy')->middleware('admin');
 });
 
 // Routes pour les choix
 Route::prefix('api/v1')->group(function () {
     Route::get('/choix', [ChoixController::class, 'index'])->name('choix.index');
     Route::get('/choix/{id}', [ChoixController::class, 'show'])->name('choix.show');
-    Route::post('/', [ChoixController::class, 'store'])->name('choix.store');
-    Route::put('/{id}', [ChoixController::class, 'update'])->name('choix.update');
-    Route::delete('/{id}', [ChoixController::class, 'destroy'])->name('choix.destroy');
+    Route::post('/', [ChoixController::class, 'store'])->name('choix.store')->middleware('admin');
+    Route::put('/{id}', [ChoixController::class, 'update'])->name('choix.update')->middleware('admin');
+    Route::delete('/{id}', [ChoixController::class, 'destroy'])->name('choix.destroy')->middleware('admin');
 });
 
 

@@ -54,7 +54,6 @@ const selectChoice = (choice) => {
   <div>
     <p v-if="currentPassage">{{ currentPassage.content }}</p>
 
-    <h2>Choix</h2>
     <ul>
       <li v-for="choice in choices" :key="choice.passage_id">
         <button @click="selectChoice(choice)">{{ choice.texte }}</button>

@@ -4,12 +4,22 @@ namespace App\Http\Controllers\Api\V1;
 
 use App\Models\Passage;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controllers\HasMiddleware;
+use Illuminate\Routing\Controllers\Middleware; 
 
-class PassageController extends Controller
+class PassageController extends Controller implements HasMiddleware
 {
     /**
      * Affiche une liste de tous les passages.
      */
+    public static function middleware(): array
+	{
+		return [
+			new Middleware('auth', except: ['index']),
+			new Middleware('admin', only: ['destroy']),
+		];
+	}
+    
     public function index()
     {
         $passages = Passage::all();

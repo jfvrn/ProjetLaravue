@@ -15,11 +15,22 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(PassagesTableSeeder::class);
 		$this->call(ChoixTableSeeder::class);
-        // User::factory(10)->create();
+        
 
-        // User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        User::factory()->create([
+            'name' => 'admin',
+            'email' => 'admin@admin.ch',
+            'password' => 'admin',
+            'admin' => 1
+        ]);
+
+        User::factory()->create([
+            'name' => 'joé',
+            'email' => 'joé@gmail.com',
+            'password' => '12345678',
+            'admin' => 0
+        ]);
+
+
     }
 }
