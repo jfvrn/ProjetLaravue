@@ -4,4 +4,4 @@
     </div>
 </x-app-layout>
 
-<script src="{{ mix('js/app.js') }}"></script>
+{{-- <script src="{{ mix('js/app.js') }}"></script> --}}

@@ -12,3 +12,4 @@
         </x-primary-button>
     </div>
 </x-guest-layout>
+
