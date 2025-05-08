@@ -1,75 +1,125 @@
-<!-- <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# escape game
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p> -->
+escape game est une application minimaliste d'histoire interactive de type escape game développée avec laravel 12 (backend) et vue 3 via vite (frontend). cette application permet aux utilisateurs de vivre une expérience immersive en explorant une maison lugubre, en faisant des choix multiples et en découvrant plusieurs fins.
 
-## Escape Game
-Tu te réveilles dans un salon ancien, plongé dans la pénombre, sans aucun souvenir de la façon dont tu es arrivé là. Le bois craque sous tes pas, l'air est lourd, et tout semble figé dans le temps. Une table au centre de la pièce t'offre trois objets : une clé rouillée, une lampe torche, et un carnet dont les mots semblent plus inquiétants qu’utiles.
+## 📋 table des matières
 
-Très vite, tu comprends que cette maison n’est pas un simple lieu abandonné. Deux portes t’attendent… et ton choix déterminera ton destin. Chaque pièce renferme des épreuves, des pièges mortels et des énigmes, où chaque erreur te rapproche d’une fin brutale.
+* ✨ objectifs du projet
+* 🛠️ architecture technique
+* 🌟 fonctionnalités implémentées
+* 📚 modèle de données
+* 🚀 guide d'installation
+* 🔐 sécurité
+* 💻 technologies utilisées
+* ⭐ fonctionnalités avancées
+* 📝 conclusion
 
-Tu devras observer, réfléchir, parfois prendre des risques… et faire confiance à ton instinct. Deux sorties sont possibles. Une visible, mais piégée. L’autre, bien cachée, réservée à ceux qui auront su explorer avec prudence et détermination.
+## ✨ objectifs du projet
 
-Arriveras-tu à sortir vivant de la maison aux deux clés ? Ou deviendras-tu une énigme de plus, perdue dans ses couloirs ?
+* proposer une expérience narrative immersive dans un univers mystérieux
+* offrir des choix à impact variable pour orienter l’issue de l’aventure
+* permettre la création et l’ajout simple de nouveaux passages et énigmes
+* assurer une interface réactive et accessible sur tous les appareils
+* mettre en pratique un backend robuste (API RESTful) et un frontend performant (SPA)
 
-<!-- ## About Laravel
+## 🛠️ architecture technique
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**backend — laravel 12**
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+* API RESTful : gestion des passages, choix et utilisateurs
+* authentification : système personnalisé sans packages externes
+* middlewares : protection des routes auth et guest
+* form requests : validation sécurisée des données
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**frontend — vue 3 (via vite)**
 
-## Learning Laravel
+* architecture SPA : navigation fluide sans rechargement de page
+* vue router : gestion des routes et des vues de récit
+* composables : réutilisation de la logique (ex : useFetchJson)
+* support mobile/tablette/desktop avec tailwind css
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🌟 fonctionnalités implémentées
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+* **authentification** : inscription, connexion, déconnexion
+* **gestion des récits** : création, édition et suppression de passages
+* **choix interactifs** : options variables à chaque étape
+* **fins multiples** : plusieurs dénouements selon les décisions
+* **systeme d’indices** : affichage d’indices optionnels pour aider l’utilisateur
+* **journal de progression** : suivi des passages consultés et des choix effectués
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 📚 modèle de données
 
-## Laravel Sponsors
+| entité         | champs clés                                 | description                                 |
+| -------------- | ------------------------------------------- | ------------------------------------------- |
+| users          | id, name, email, password, role             | comptes utilisateurs                        |
+| passages       | id, title, content, order                   | contenus narratifs                          |
+| choices        | id, passage\_id, label, next\_passage\_id   | options de navigation entre passages        |
+| endings        | id, name, description, condition\_rules     | dénouements possibles selon règles de choix |
+| hints          | id, passage\_id, content                    | indices liés à chaque passage               |
+| progress\_logs | id, user\_id, passage\_id, choice\_id, seen | historique de lecture et de sélection       |
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🚀 guide d'installation
 
-### Premium Partners
+1. cloner le dépôt
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+   ```bash
+   git clone <https://github.com/jfvrn/ProjetLaravue>
+   cd ProjetLaravue
+   ```
+2. installer les dépendances php
 
-## Contributing
+   ```bash
+   composer install
+   ```
+3. copier l’environnement et générer une clé
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
+4. configurer la base de données
 
-## Code of Conduct
+   * utiliser sqlite (par défaut) :
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+     ```bash
+     touch database/database.sqlite
+     ```
+   * mettre à jour `DB_CONNECTION` et `DB_DATABASE` dans `.env`
+5. exécuter migrations & seeds
 
-## Security Vulnerabilities
+   ```bash
+   php artisan migrate --seed
+   ```
+6. installer dépendances js & compiler
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+   ```bash
+   npm install
+   npm run dev
+   ```
+7. lancer le serveur
 
-## License
+   ```bash
+   php artisan serve
+   ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT). -->
+   puis accéder à `http://localhost:8000`
+
+## 🔐 sécurité
+
+* protection CSRF sur tous les formulaires
+* validation stricte via laravel form requests
+* hashage bcrypt des mots de passe
+* régénération de session à chaque connexion
+* contrôle d’autorisation pour la modification des contenus
+
+## 💻 technologies utilisées
+
+* laravel 12 (php 8.2)
+* vue 3 (vite)
+* tailwind css
+* sqlite (configurable mysql/pgsql)
+* composer, npm/yarn, git
+
+## 📝 conclusion
+
+escape game est une implémentation complète d’une application d’histoire interactive combinant backend solide et frontend moderne. elle offre une expérience immersive, sécurisée et facilement extensible pour toute nouvelle aventure.
