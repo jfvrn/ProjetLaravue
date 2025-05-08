@@ -14,7 +14,7 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans text-gray-100 antialiased bg-cover bg-center" style="background-image: url('/img/background.png');">
+    <body class="font-sans text-gray-100 antialiased bg-cover bg-center" style="background-color: #061421">
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-opacity-100">
             {{-- <div>
                 <a href="/">

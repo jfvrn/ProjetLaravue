@@ -1,1 +1,1 @@
-<img src="https://svgsilh.com/svg/150446.svg" alt="" width="36px" height="36px">
+<img src="https://svgsilh.com/svg/150446-ffffff.svg" alt="" width="36px" height="36px">

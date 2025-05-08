@@ -16,7 +16,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-sans antialiased bg-cover bg-center" style="background-image: url('/img/background.png');">
+<body class="font-sans antialiased bg-cover bg-center" style="background-color: #061421;">
     <div class="min-h-screen bg-opacity-100">
         @include('layouts.navigation')
 

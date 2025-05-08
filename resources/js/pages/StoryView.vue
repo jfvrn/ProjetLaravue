@@ -64,14 +64,30 @@ const selectChoice = (choice) => {
 
 <style scoped>
 body {
-    background-color: #f9f9f9; /* Couleur claire pour un style sobre */
-    color: #333; /* Texte sombre pour un bon contraste */
+    background-color: #1e1e2f; /* Couleur sombre pour le fond */
+    color: #ffffff; /* Texte blanc pour un bon contraste */
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* S'assure que le contenu est centré verticalement */
+}
+
+div {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1f2a38; /* Couleur sombre pour le bloc */
+    color: #ffffff; /* Texte blanc */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre pour un effet subtil */
+    max-width: 700px; /* Limite la largeur du bloc */
+    width: 90%; /* S'assure que le bloc est réactif */
+    margin: auto; /* Centre horizontalement */
+    margin-top: 5%;
 }
 
 h1, h2, h3 {
-    color: #444; /* Couleur légèrement plus sombre pour les titres */
+    color: #ffffff; /* Couleur blanche pour les titres */
     font-weight: bold;
     margin-bottom: 1rem;
 }
@@ -93,13 +109,15 @@ li {
 
 button {
     background-color: #007bff; /* Couleur bleue pour les boutons */
-    color: #fff; /* Texte blanc pour un bon contraste */
+    color: #fff; /* Texte blanc */
     border: none;
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    border-radius: 5px; /* Arrondi léger pour un style moderne */
+    border-radius: 5px; /* Arrondi léger */
+    width: 100%; /* Prend toute la largeur de la box */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
 }
 
 button:hover {
@@ -107,19 +125,11 @@ button:hover {
 }
 
 pre {
-    background-color: #f1f1f1;
-    color: #333;
+    background-color: #333333; /* Fond sombre pour les blocs de code */
+    color: #ffffff; /* Texte blanc */
     padding: 10px;
     border-radius: 5px;
     overflow-x: auto;
-    border: 1px solid #ddd; /* Bordure légère pour délimiter */
-}
-
-div {
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #fff; /* Fond blanc pour un style propre */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet subtil */
+    border: 1px solid #444444; /* Bordure légère */
 }
 </style>

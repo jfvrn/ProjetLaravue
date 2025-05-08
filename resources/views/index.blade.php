@@ -1,7 +1,7 @@
 <x-guest-layout>
     <div class="text-center my-5">
         <h1 class="text-2xl font-bold">Escape Game</h1>
-        <p class="text-gray-600 mt-2">Connecte toi ou inscrit toi pour continuer.</p>
+        <p class="text-gray-300 mt-2">Connecte toi ou inscrit toi pour continuer.</p>
     </div>
     <div class="flex justify-center space-x-4 mt-5">
         <x-primary-button>

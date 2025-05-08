@@ -18,6 +18,6 @@ class Admin
         if ($request->user()->admin) {
             return $next($request);
         }
-        return new RedirectResponse(url('dashboard'));
+        abort(403, "Accès refusé: tu n'es pas admin");
     }
 }
