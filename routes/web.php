@@ -6,14 +6,17 @@ use App\Http\Controllers\Api\V1\ChoixController;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 
+Route::get('/home', function () {
+    return view('welcome'); // Replace 'welcome' with the actual view for the homepage where users can play multiple stories
+})->middleware(['auth', 'verified'])->name('home');
 
 Route::get('/', function () {
-    return view('index');
+    return redirect()->route('home');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/story', function () {
+    return view('story');
+})->middleware(['auth', 'verified'])->name('story');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -38,6 +41,5 @@ Route::prefix('api/v1')->group(function () {
     Route::put('/{id}', [ChoixController::class, 'update'])->name('choix.update')->middleware('admin');
     Route::delete('/{id}', [ChoixController::class, 'destroy'])->name('choix.destroy')->middleware('admin');
 });
-
 
 require __DIR__.'/auth.php';

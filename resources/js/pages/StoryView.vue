@@ -57,6 +57,7 @@ const selectChoice = (choice) => {
 
 <template>
     <div>
+        <h1 class="story-name">La Maison</h1>
         <p v-if="currentPassage">{{ currentPassage.content }}</p>
 
         <ul v-if="!loading">
