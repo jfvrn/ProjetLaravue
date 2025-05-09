@@ -55,8 +55,8 @@ class ChoixTableSeeder extends Seeder
             ['passage_id' => 7, 'texte' => 'Réessayer', 'suivant_id' => 10],
 
             //choix code 1913
-            ['passage_id' => 9, 'texte' => 'Prendre la clé noire', 'suivant_id' => 19],
-            ['passage_id' => 9, 'texte' => 'Prendre la clé dorée', 'suivant_id' => 15],
+            ['passage_id' => 8, 'texte' => 'Prendre la clé noire', 'suivant_id' => 19],
+            ['passage_id' => 8, 'texte' => 'Prendre la clé dorée', 'suivant_id' => 15],
 
             //choix code 2020
             ['passage_id' => 9, 'texte' => 'Réessayer', 'suivant_id' => 10],
