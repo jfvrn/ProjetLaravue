@@ -193,4 +193,10 @@ pre {
     border: 1px solid #444444;
     /* Bordure légère */
 }
+
+.story-name{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+}
 </style>
