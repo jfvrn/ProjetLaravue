@@ -15,9 +15,12 @@ return new class extends Migration
     {
         Schema::create('passages', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('story_id'); // Ajout de la clé étrangère vers stories
             $table->string('title'); // Titre du passage
             $table->text('content'); // Contenu du passage
             $table->timestamps();
+
+            $table->foreign('story_id')->references('id')->on('stories')->onDelete('cascade');
         });
     }
 

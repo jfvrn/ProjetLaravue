@@ -13,9 +13,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        $this->call(StoriesTableSeeder::class);
         $this->call(PassagesTableSeeder::class);
-		$this->call(ChoixTableSeeder::class);
-        
+        $this->call(ChoixTableSeeder::class);
 
         User::factory()->create([
             'name' => 'admin',
@@ -30,6 +30,8 @@ class DatabaseSeeder extends Seeder
             'password' => '12345678',
             'admin' => 0
         ]);
+
+        
 
 
     }

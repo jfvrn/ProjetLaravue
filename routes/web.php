@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Api\V1\PassageController;
 use App\Http\Controllers\Api\V1\ChoixController;
+use App\Http\Controllers\Api\V1\StoryController;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 
@@ -11,9 +12,12 @@ Route::get('/home', function () {
 })->middleware(['auth', 'verified'])->name('home');
 
 Route::get('/', function () {
+    if (auth()->check()) {
+        return view('welcome');
+    }
     return view('index');
-    return redirect()->route('welcome');
 });
+
 
 Route::get('/story', function () {
     return view('story');
@@ -41,6 +45,15 @@ Route::prefix('api/v1')->group(function () {
     Route::post('/', [ChoixController::class, 'store'])->name('choix.store')->middleware('admin');
     Route::put('/{id}', [ChoixController::class, 'update'])->name('choix.update')->middleware('admin');
     Route::delete('/{id}', [ChoixController::class, 'destroy'])->name('choix.destroy')->middleware('admin');
+});
+
+// Routes pour les stories
+Route::prefix('api/v1')->group(function () {
+    Route::get('/stories', [StoryController::class, 'index'])->name('stories.index');
+    Route::get('/stories/{id}', [StoryController::class, 'show'])->name('stories.show');
+    Route::post('/stories', [StoryController::class, 'store'])->name('stories.store')->middleware('admin');
+    Route::put('/stories/{id}', [StoryController::class, 'update'])->name('stories.update')->middleware('admin');
+    Route::delete('/stories/{id}', [StoryController::class, 'destroy'])->name('stories.destroy')->middleware('admin');
 });
 
 require __DIR__.'/auth.php';

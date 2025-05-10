@@ -14,7 +14,7 @@ class Passage extends Model
      *
      * @var array
      */
-    protected $fillable = ['title', 'content', 'parent_id'];
+    protected $fillable = ['title', 'content', 'parent_id', 'story_id'];
 
     public function users()
     {
@@ -23,5 +23,10 @@ class Passage extends Model
 
     public function choix(){
         return $this->hasMany(Choix::class);
+    }
+
+    public function story()
+    {
+        return $this->belongsTo(Story::class);
     }
 }
