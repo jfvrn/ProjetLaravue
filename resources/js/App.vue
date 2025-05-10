@@ -1,6 +1,5 @@
 <script setup>
-  import StoryView from '@/pages/StoryView.vue';
-
+  import StoryView from '@/components/StoryView.vue';
 </script>
 
 <template>

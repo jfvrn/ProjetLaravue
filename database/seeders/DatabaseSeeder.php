@@ -30,9 +30,5 @@ class DatabaseSeeder extends Seeder
             'password' => '12345678',
             'admin' => 0
         ]);
-
-        
-
-
     }
 }
