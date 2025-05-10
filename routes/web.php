@@ -7,11 +7,12 @@ use Illuminate\Support\Facades\Route;
 use App\Models\User;
 
 Route::get('/home', function () {
-    return view('welcome'); // Replace 'welcome' with the actual view for the homepage where users can play multiple stories
+    return view('welcome'); 
 })->middleware(['auth', 'verified'])->name('home');
 
 Route::get('/', function () {
-    return redirect()->route('home');
+    return view('index');
+    return redirect()->route('welcome');
 });
 
 Route::get('/story', function () {
