@@ -14,7 +14,7 @@ class StoriesTableSeeder extends Seeder
     {
         Story::create([
             'title' => 'La Maison',
-            'description' => 'Tu te réveilles dans une maison, tu dois sortir et vite !',
+            'description' => 'Tu te réveilles dans une maison, Tu as un mauvais présentiment tu dois sortir et vite...',
             'available' => true
         ]);
 
@@ -26,7 +26,7 @@ class StoriesTableSeeder extends Seeder
 
         Story::create([
             'title' => 'Labyrinthe des ombres',
-            'description' => 'Tu te réveilles dans une maison, tu dois sortir et vite !',
+            'description' => "Plusieurs chemins s'offrent à toi, à toi de choisir les bons...",
             'available' => false
         ]);
     }

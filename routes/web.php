@@ -19,9 +19,9 @@ Route::get('/', function () {
 });
 
 
-Route::get('/story', function () {
-    return view('story');
-})->middleware(['auth', 'verified'])->name('story');
+Route::get('/story/{id}', function ($id) {
+    return view('story', ['storyId' => $id]);
+})->middleware(['auth', 'verified'])->name('story.show');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
