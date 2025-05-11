@@ -1,8 +1,8 @@
-# escape game
+# Escape Game
 
-escape game est une application minimaliste d'histoire interactive de type escape game développée avec laravel 12 (backend) et vue 3 via vite (frontend). cette application permet aux utilisateurs de vivre une expérience immersive en explorant une maison lugubre, en faisant des choix multiples et en découvrant plusieurs fins.
+Escape game est une application minimaliste d'histoire interactive de type escape game développée avec laravel 12 (backend) et vue 3 via vite (frontend). cette application permet aux utilisateurs de vivre une expérience immersive en sein des plusieurs hisoires
 
-## 📋 table des matières
+## 📋 Table des matières
 
 * ✨ objectifs du projet
 * 🛠️ architecture technique
@@ -14,15 +14,15 @@ escape game est une application minimaliste d'histoire interactive de type escap
 * ⭐ fonctionnalités avancées
 * 📝 conclusion
 
-## ✨ objectifs du projet
+## ✨ Objectifs du projet
 
-* proposer une expérience narrative immersive dans un univers mystérieux
-* offrir des choix à impact variable pour orienter l’issue de l’aventure
-* permettre la création et l’ajout simple de nouveaux passages et énigmes
-* assurer une interface réactive et accessible sur tous les appareils
-* mettre en pratique un backend robuste (API RESTful) et un frontend performant (SPA)
+ • Concevoir et développer une application web complète de type SPA(SinglePageApplication).
+ • Implémenter un backend Laravel structuré avec des routes RESTful.
+ • Créer une API versionnée avec validation, middleware, et relations Eloquent.
+ • Gérer un frontendVue.js pour naviguer dans une histoire à choix multiples.
+ • Interagir avec une API (GET, POST, etc.) et afficher dynamiquement les contenus.
 
-## 🛠️ architecture technique
+## 🛠️ Architecture technique
 
 **backend — laravel 12**
 
@@ -38,25 +38,22 @@ escape game est une application minimaliste d'histoire interactive de type escap
 * composables : réutilisation de la logique (ex : useFetchJson)
 * support mobile/tablette/desktop avec tailwind css
 
-## 🌟 fonctionnalités implémentées
+## 🌟 Fonctionnalités implémentées
 
 * **authentification** : inscription, connexion, déconnexion
 * **gestion des récits** : création, édition et suppression de passages
 * **choix interactifs** : options variables à chaque étape
 * **fins multiples** : plusieurs dénouements selon les décisions
-* **systeme d’indices** : affichage d’indices optionnels pour aider l’utilisateur
 * **journal de progression** : suivi des passages consultés et des choix effectués
 
-## 📚 modèle de données
+## 📚 Modèle de données
 
 | entité         | champs clés                                 | description                                 |
 | -------------- | ------------------------------------------- | ------------------------------------------- |
 | users          | id, name, email, password, role             | comptes utilisateurs                        |
+| stories        | id, title, description,                     | titres et descriptions des histoires        |
 | passages       | id, title, content, order                   | contenus narratifs                          |
-| choices        | id, passage\_id, label, next\_passage\_id   | options de navigation entre passages        |
-| endings        | id, name, description, condition\_rules     | dénouements possibles selon règles de choix |
-| hints          | id, passage\_id, content                    | indices liés à chaque passage               |
-| progress\_logs | id, user\_id, passage\_id, choice\_id, seen | historique de lecture et de sélection       |
+| choices        | id, passage\_id, content, next\_passage\_id   | options de navigation entre passages        |
 
 ## 🚀 guide d'installation
 
@@ -119,7 +116,3 @@ escape game est une application minimaliste d'histoire interactive de type escap
 * tailwind css
 * sqlite (configurable mysql/pgsql)
 * composer, npm/yarn, git
-
-## 📝 conclusion
-
-escape game est une implémentation complète d’une application d’histoire interactive combinant backend solide et frontend moderne. elle offre une expérience immersive, sécurisée et facilement extensible pour toute nouvelle aventure.
