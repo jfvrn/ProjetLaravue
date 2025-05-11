@@ -1,22 +1,39 @@
 <script setup>
-import { ref, watchEffect } from 'vue';
+import { ref, watchEffect, onMounted } from 'vue';
 import { useFetchJson } from '@/composables/useFetchJson';
+
+const props = defineProps({
+    storyId: {
+        type: [String, Number],
+        required: true
+    }
+});
 
 const currentPassage = ref(null);
 const choices = ref([]);
 const loading = ref(false);
-const passageId = ref(12); // Commence par le passage avec l'ID 12
+const passageId = ref(null); // sera défini dynamiquement
+
+const LOCAL_STORAGE_KEY = (storyId) => `progress_story_${storyId}`;
+
+const saveProgress = (storyId, passageId) => {
+    localStorage.setItem(LOCAL_STORAGE_KEY(storyId), passageId);
+};
+
+const loadProgress = (storyId) => {
+    const saved = localStorage.getItem(LOCAL_STORAGE_KEY(storyId));
+    return saved ? parseInt(saved, 10) : 12;
+};
 
 const fetchPassage = (id) => {
     loading.value = true;
     const { data, error } = useFetchJson(`/api/v1/passages/${id}`);
-
     watchEffect(() => {
         if (data.value) {
             currentPassage.value = data.value;
             fetchChoices(data.value.id);
+            saveProgress(props.storyId, data.value.id); // Sauvegarde la progression à chaque passage
         }
-
         if (error.value) {
             console.error('Error fetching passage:', error.value);
         }
@@ -43,8 +60,10 @@ const fetchChoices = (id) => {
     });
 };
 
-// Fetch the initial passage
-fetchPassage(passageId.value);
+onMounted(() => {
+    passageId.value = loadProgress(props.storyId);
+    fetchPassage(passageId.value);
+});
 
 const selectChoice = (choice) => {
     if (choice.suivant_id) {
