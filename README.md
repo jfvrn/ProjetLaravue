@@ -55,7 +55,7 @@ Escape game est une application minimaliste d'histoire interactive de type escap
 | passages       | id, title, content, order                   | contenus narratifs                          |
 | choices        | id, passage\_id, content, next\_passage\_id   | options de navigation entre passages        |
 
-## 🚀 guide d'installation
+## 🚀 Guide d'installation
 
 1. cloner le dépôt
 
@@ -101,7 +101,7 @@ Escape game est une application minimaliste d'histoire interactive de type escap
 
    puis accéder à `http://localhost:8000`
 
-## 🔐 sécurité
+## 🔐 Sécurité
 
 * protection CSRF sur tous les formulaires
 * validation stricte via laravel form requests
