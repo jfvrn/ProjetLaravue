@@ -114,8 +114,6 @@ EOD,
                 'content' => <<<'EOD'
 Tu t’approches du coffre à combinaison. Un petit clavier numérique t’invite à entrer un code à 4 chiffres.
 
-Tu as 2 tentative(s) restante(s).
-
 Quels codes veux-tu essayer ?
 EOD,
             ],
