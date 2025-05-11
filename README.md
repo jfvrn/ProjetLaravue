@@ -109,7 +109,7 @@ Escape game est une application minimaliste d'histoire interactive de type escap
 * régénération de session à chaque connexion
 * contrôle d’autorisation pour la modification des contenus
 
-## 💻 technologies utilisées
+## 💻 Technologies utilisées
 
 * laravel 12 (php 8.2)
 * vue 3 (vite)
