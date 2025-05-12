@@ -14,7 +14,11 @@ const choices = ref([]);
 const loading = ref(false);
 const passageId = ref(null); // sera défini dynamiquement
 
-const LOCAL_STORAGE_KEY = (storyId) => `progress_story_${storyId}`;
+const LOCAL_STORAGE_KEY = () => {
+    // Récupérer l'ID de l'utilisateur depuis window.Laravel
+    const userId = window.Laravel?.user?.id || 'guest';
+    return `progress_story_user${userId}`;
+};
 
 const saveProgress = (storyId, passageId) => {
     localStorage.setItem(LOCAL_STORAGE_KEY(storyId), passageId);

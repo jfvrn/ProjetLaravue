@@ -16,6 +16,13 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <link rel="icon" type="image/png" href="/favicon.png">
+
+    <script>
+        window.Laravel = {!! json_encode([
+                'csrfToken' => csrf_token(),
+                'user' => Auth::check() ? Auth::user()->toArray() : null,
+            ]) !!};
+    </script>
 </head>
 
 <body class="font-sans antialiased bg-cover bg-center" style="background-color: #061421;">
