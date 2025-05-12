@@ -1,7 +1,4 @@
 # Escape Game
-
-Escape game est une application minimaliste d'histoire interactive de type escape game développée avec laravel 12 (backend) et vue 3 via vite (frontend). cette application permet aux utilisateurs de vivre une expérience immersive en sein des plusieurs hisoires
-
 ## 📋 Table des matières
 
 * [✨ Objectifs du projet](#-objectifs-du-projet)
