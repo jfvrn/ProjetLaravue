@@ -4,15 +4,13 @@ Escape game est une application minimaliste d'histoire interactive de type escap
 
 ## 📋 Table des matières
 
-* ✨ objectifs du projet
-* 🛠️ architecture technique
-* 🌟 fonctionnalités implémentées
-* 📚 modèle de données
-* 🚀 guide d'installation
-* 🔐 sécurité
-* 💻 technologies utilisées
-* ⭐ fonctionnalités avancées
-* 📝 conclusion
+* [✨ Objectifs du projet](#-objectifs-du-projet)
+* [🛠️ Architecture technique](#️-architecture-technique)
+* [🌟 Fonctionnalités implémentées](#-fonctionnalités-implémentées)
+* [📚 Modèle de données](#-modèle-de-données)
+* [🚀 Guide d'installation](#-guide-dinstallation)
+* [🔐 Sécurité](#-sécurité)
+* [💻 Technologies utilisées](#-technologies-utilisées)
 
 ## ✨ Objectifs du projet
 
@@ -100,6 +98,20 @@ Escape game est une application minimaliste d'histoire interactive de type escap
    ```
 
    puis accéder à `http://localhost:8000`
+
+8. se connecter pour tester
+
+   Compte admin
+   ```bash
+   email: admin@admin.ch
+   mot de passe: admin
+   ```
+
+   Compte guest
+   ```bash
+   email: joe@gmail.ch
+   mot de passe: 12345678
+   ```
 
 ## 🔐 Sécurité
 
