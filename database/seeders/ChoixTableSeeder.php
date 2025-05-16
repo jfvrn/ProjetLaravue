@@ -87,7 +87,10 @@ class ChoixTableSeeder extends Seeder
             ['passage_id' => 22, 'texte' => 'Rejouer l’histoire', 'suivant_id' => 12],
 
              //choix PiegeGas
-             ['passage_id' => 23, 'texte' => 'Recommencer', 'suivant_id' => 12],
+            ['passage_id' => 23, 'texte' => 'Recommencer', 'suivant_id' => 12],
+
+            //choix Curiosité fatale
+            ['passage_id' => 11, 'texte' => 'Recommencer', 'suivant_id' => 12],
         ];
 
         foreach ($choix as $choixData) {
